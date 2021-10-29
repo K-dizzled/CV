@@ -1,0 +1,98 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[grey]{classic}
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage{xcolor}
+
+% adjust the page margins
+\usepackage[scale=0.88]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Andrei}
+\familyname{Kozyrev}
+\title{Curriculum Vitae}
+\email{kozyrev.andreiii2016@gmail.com}
+
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\vspace{-10mm}
+\section{Education}
+\cventry{2018--2020}{SPbU D. K. Fadeev Academic Gymnasium}{Saint-Petersburg State University}{Saint-Petersburg, Russia}
+{Applied Mathematics and informatics program}{}
+\cventry{2020--\quad\quad}{The Faculty of Mathematics and Computer Science, Modern Software Engineering}{Saint-Petersburg State University}{Saint-Petersburg, Russia}
+{Currently a second-year student}{}
+\subsection{Other}
+%\cvlistitem{Short course in methods, tools and systems for information security,   Moscow Engineering Physics Institute, Moscow, Russia, December 2004.}
+%\cvlistitem{Short course in hardware and software for computer networking, 
+%Southern Federal University, Rostov-on-Don, Russia, November--December 2010.}
+\cvlistitem{Computer Science Center Introduction to IOS development course, Saint-Petersburg, Russia, Autumn, 2021.}
+%\cvlistitem{Short course in iOS-applications Development, National Research University «MPEI», Moscow, Russia, June 14--19, 2015.}
+%\cvlistitem{Online courses (coursera.org, edx.org) in Automata, Logic, Complilers, Machine Learning, Algorithms, Cryptography, Functional Programming, etc.)}
+
+
+% \section{Master thesis}
+% \cvline{title}{\emph{Singular-type operators in the spaces of vector-valued functions.}}
+% \cvline{supervisor}{Prof. V.S. Pilidi}
+% \cvline{description}{\small Algebras of operators of singular and bisingular type are considered. For these algebras, 
+% the notions of an envelope of a family of operators are introduced, 
+% necessary and sufficient conditions of its existence and uniqueness are given. 
+% There are obtained estimates for the essential norm of the envelope operator. 
+% The statements of the paper are demonstrated for the case of singular integral 
+% operators with continuous operator-valued coefficients.}
+
+\section{Academic Conferences}
+\cventry{April~2020}{Scientific and Practical Conference ``Academic Gymnasium''}{Saint-Petersburg}{}{Russia}{}
+
+\section{Software Development Experience}
+\cventry{}{A note}{\textit{names are referal to github projects}}{}{}{}
+\cventry{2021}{\href{https://github.com/bot-mne-v-rot/p2beer}{P2Beer}}{A fully decentralized peer to peer desktop console messenger with a curses like interface. Created in a team of three people on first bachelor year}{\textit{\textbf{Kotlin}}}{}{}
+\cventry{2021}{\href{https://github.com/K-dizzled/ProArtGan}{ProArtGan}}{Progressive generative adversarial network for generating landscape images}{\textit{\textbf{Python}}}{}{}
+\cventry{2021}{\href{https://github.com/K-dizzled/Huffman_coder}{Huffman coder}}{Huffman encoder and decoder with tests}{\textit{\textbf{C++}}}{}{}
+\cventry{2020}{\href{https://github.com/K-dizzled/C-Lang-HW/tree/master/hw_01}{BMP Editor}}{BMP format image editor for cropping and rotating images}{\textit{\textbf{C}}}{}{}
+\cventry{2020}{\href{https://github.com/K-dizzled/text-index-project}{Text Index}}{Console app for building a text-index using a trie data structure for online requests on text data}{\textit{\textbf{Kotlin}}}{}{}
+\cventry{2020}{\href{https://github.com/K-dizzled/hamming-code-linal-project}{Hamming code}}{Console app implementing hamming code}{\textit{\textbf{Kotlin}}}{}{}
+\cventry{2020}{\href{https://github.com/K-dizzled/DiserRepo}{Diser}}{A messenger, adapted for visually impared people. Created for the Conference, mentioned in Academic Conferences. I could have said about it in 
+a more detailed way, but the website I made already has all the information. The website link is below}{\textit{\textbf{Java}}}{}{}
+\cventry{2020}{\href{https://k-dizzled.github.io/disermessaging/index.html}{Diser website}}{A website for a messenger mentioned above}{\href{https://github.com/K-dizzled/disermessaging}{\textcolor{lightgray}{Link to github}}}{\textit{\textbf{HTML, CSS, JavaScript}}}{}
+\cventry{2019}{\href{https://k-dizzled.github.io/delivery-food/}{Delivery Food}}{A website for a food delivery service. All the data about products is stored in Firebase database and loads directly from there}{\href{https://github.com/K-dizzled/delivery-food}{\textcolor{lightgray}{Link to github}}}{\textit{\textbf{HTML, CSS, JavaScript}}}{}
+
+\section{Technical Strengths}
+\cvlistitem{Confident LaTeX knowledge. \href{https://github.com/bot-mne-v-rot}{\textcolor{lightgray}{Link to an organization with all study abstracts, made in TeX.}}}
+\cvlistitem{Advanced Git skills}
+\cvlistitem{Knowledge of Algorithms and Data Structures}
+
+% \section{Selected Papers}
+% \cvlistitem{V. Bragilevsky, V. S. Pilidi. Analog of Simonenko's theorem on an envelope of a family of operators for operators on the spaces of vector-valued functions.
+% Izvestia vuzov. Severokavkazsky region. Vol. 4. 2005. (\emph{in Russian})}
+% \cvlistitem{V. Bragilevsky. Limits of Folds Expressiveness. Practice of Functional Programming. Vol.~4. 2010. (\emph{in Russian})}
+
+\section{Soft skills}
+\cvlistitem{Always ready to learn.}
+\cvlistitem{Always seeking challenging tasks and opportunities.}
+\cvlistitem{``Maxed out his social skills''. Always able to find a common ground with anyone.}
+\cvlistitem{Team player. Able to team up a bunch of shy programmers together.}
+\cvlistitem{World class player in searching for data. Professional Googler. There is a saying ``Once on the Internet, always on the Internet''. It's
+similar for me. Once on the Internet, I can find it then.}
+
+\section{Languages}
+\cvline{Russian}{\small Native speaker.}
+\cvline{English}{\small Confirmed B2 in 2018, unconfirmed C1 in now.}
+\cvline{French}{\small Beginner level.}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
