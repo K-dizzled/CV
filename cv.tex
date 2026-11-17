@@ -4,9 +4,14 @@
 \moderncvtheme[grey]{classic}
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
 \usepackage{xcolor}
+\usepackage{enumitem}
+% inline links are italic so they read as links
+\newcommand{\ilink}[2]{\href{#1}{\textit{#2}}}
+% phase title with 1-2 bullets, used inside a \cventry description
+\newcommand{\phase}[2]{\textit{#1}\begin{itemize}[leftmargin=1.1em,label={\scriptsize$\circ$},itemsep=0.5pt,topsep=0.5pt,parsep=0pt,partopsep=0pt,after=\vspace{4pt}]#2\end{itemize}}
 
 % adjust the page margins
-\usepackage[scale=0.88]{geometry}
+\usepackage[hmargin=8.5mm,top=10mm,bottom=8mm]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 \AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
@@ -14,13 +19,13 @@
 % personal data
 \firstname{Andrei}
 \familyname{Kozyrev}
-\title{Curriculum Vitae}
+\title{Senior AI Research Engineer}
 \email{kozyrev.andrei.a@gmail.com}
 \phone{+49 176 84270634}
 \homepage{andrei-kozyrev.net}
 
 
-%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 
 
 %----------------------------------------------------------------------------------
@@ -29,42 +34,45 @@
 \begin{document}
 \maketitle
 \vspace{-10mm}
-\section{Education}
-% \cventry{2018--2020}{SPbU D. K. Fadeev Academic Gymnasium}{Saint-Petersburg State University}{Saint-Petersburg, Russia}
-% {Applied Mathematics and informatics program}{}
-\cventry{2020--2022}{The Faculty of Mathematics and Computer Science, Modern Software Engineering}{Saint-Petersburg State University}{Saint-Petersburg, Russia}
-{}{}
-\cventry{2022--2023}{Bachelor of Science, Computer Science}{Constructor University Bremen}{Germany}
-{Bachelor of Computer Science. GPA\@: \textbf{B\texttt{+}}}{}
-\cventry{2023--2025}{Master's of Science, Advanced Software Technology}{Constructor University Bremen}{Germany}
-{}{}
-% \subsection{Other}
+\section{Professional Experience}
+\cventry{2022--present}{Research Scientist / Software Developer}{JetBrains Research}{Germany}{}{\phase{Self-improving coding agents}{
+  \item SKILL optimization for Claude Code and \ilink{https://www.jetbrains.com/junie/}{Junie}: \textbf{up to +22pp} score, \textbf{$2\times$ faster} and cheaper on live issues
+  \item Supervised a bachelor's thesis on the project; paper \ilink{https://arxiv.org/abs/2609.12742}{Skill Issue}, arXiv'26 (updated version coming soon)
+}
+\phase{Automatic agent optimization in Kotlin}{
+  \item Built \ilink{https://jetbrains.github.io/koog-auto-agent-optimization-lib/}{koog-agents-optimization}: DSPy optimizers (MIPROv2, GEPA, BootstrapFewShot) and ACE
+  \item Kotlin library for Koog agents; open source on Maven Central, used internally at JetBrains
+}
+\phase{AI evaluation}{
+  \item Evaluated LLM pipelines across JetBrains; designed TeamCity AI feature evals from scratch
+}
+\phase{Artificial Intelligence in Formal methods}{
+  \item Led the team behind \ilink{https://github.com/JetBrains-Research/coqpilot}{CoqPilot} and \ilink{https://github.com/JetBrains-Research/rocqstar-agentic-system}{RocqStar} (ASE'24, AAMAS'26)
+  \item Post-training, retrieval and LLM agents for Rocq (Coq) code generation
+}
+}
+\cventry{2020--2022}{iOS Software Developer}{Outsourcing company}{Russia}{}{}
 
-% \cvlistitem{Various IOS development courses in Computer Science and Educational Centers in Russia}
+\section{Education}
+\cventry{2023--2025}{Master of Science, Advanced Software Technology}{Constructor University Bremen}{Germany}{}{Thesis: \ilink{https://andrei-kozyrev.net/papers/kozyrev2025masterthesis.pdf}{Similarity-driven Retrieval Mechanism for Rocq theorems}}
+\cventry{2022--2023}{Bachelor of Science, Computer Science}{Constructor University Bremen}{Germany}{GPA\@: \textbf{B\texttt{+}}}{Thesis: \ilink{https://andrei-kozyrev.net/papers/bachelorthesis.pdf}{Equality saturation for solving equalities of relational expressions}}
+\cventry{2020--2022}{Mathematics and Computer Science}{Saint-Petersburg State University}{Russia}{}{Undergraduate studies, Modern Software Engineering program}
 
 \section{Publications}
-\cventry{\href{https://arxiv.org/abs/2602.05762}{arXiv'26}}{A. Kozyrev, N. Khramov, D. Lochmelis, V. Morelli, G. Solovev, A. Podkopaev}{RocqSmith: Can Automatic Optimization Forge Better Proof Agents?}{}{}{}
+\cventry{\href{https://arxiv.org/abs/2609.12742}{arXiv'26}}{M. Kozyrev, A. Kozyrev, A. Podkopaev}{Skill Issue: Lessons from Optimizing Repository SKILLs for Coding Agents}{}{}{}
+\cventry{\href{https://arxiv.org/abs/2602.05762}{ICLR'26 VerifAI}}{A. Kozyrev, N. Khramov, D. Lochmelis, V. Morelli, G. Solovev, A. Podkopaev}{RocqSmith: Can Automatic Optimization Forge Better Proof Agents?}{}{}{}
 \cventry{\href{https://dl.acm.org/doi/10.65109/ZQXK7747}{AAMAS'26}}{A. Kozyrev, N. Khramov, G. Solovev, A. Podkopaev}{RocqStar: Leveraging Similarity-driven Retrieval and Agentic Systems for Rocq generation}{}{}{}
 \cventry{\href{https://dl.acm.org/doi/10.1145/3691620.3695357}{ASE'24}}{A. Kozyrev, G. Solovev, N. Khramov, A. Podkopaev}{CoqPilot: LLM-based Proof Generation in Coq}{}{}{}
 
-
-\section{Professional Experience}
-\cventry{2023--present}{Research Scientist, JetBrains Research}{Bremen}{}{Germany}{Proof automatization using Language Models. AI Agents and their optimization.}
-\cventry{2022--2023}{Intern at JetBrains Programming Languages Lab}{Bremen}{}{Germany}{Proof automatization for Coq proof assistant using OCaml \& Rust.}
-\cventry{2022}{Swift Developer}{Saint-Petersburg}{}{Russia}{IOS Software Developer in an outsourcing company, Spring 2022.}
-
 \section{Selected Projects}
-\cventry{}{A note}{\textit{names are referal to github projects}}{}{}{}
-\cventry{2025}{\href{https://github.com/JetBrains-Research/rocqstar-rag}{Rocq RAG}}{A novel approach to Retrieval Augmented generation in Rocq language. Developed during work in JetBrains-Research}{\textbf{Rocq (Coq), PyTorch, TypeScript}}{}{}
-\cventry{2024}{\href{https://github.com/JetBrains-Research/coqpilot}{CoqPilot}}{A Visual Studio Code extension that is designed to help automate writing of Coq proofs. Developed while working in JetBrains-Research, started as a one-person project, and has grown to a three-people team. Repository on GitHub has more than 100 stars, paper is published on ASE'24}{\textbf{TypeScript, Coq}}{}{}
-\cventry{2023}{\href{https://github.com/K-dizzled/relations-via-egg}{Proofs of relational expressions via EGG}}{Equality saturation for solving equalities of relational expressions, bachelor thesis in Constructor University Bremen}{\textit{\textbf{Rust, OCaml, Coq}}}{}{}
-\cventry{2022}{\href{https://github.com/K-dizzled/swift-high-performance-network-programming}{High-Performance Network Programming in Swift}}{Research on Highly-efficient network programming using Swift and any competitive ability of Swift in this domain}{\textit{\textbf{Swift, Java, Python}}}{}{}
-\cventry{2022}{\href{https://github.com/K-dizzled/progressive-gan-pytorch}{Progressive GAN Pytorch}}{Progressive generative adversarial network implementation from ``Progressive growing of GANs for improved Quality, Stability, and Variation'' paper}{\textit{\textbf{Python}}}{}{}
-% \cventry{2021}{\href{https://github.com/bot-mne-v-rot/p2beer}{P2Beer}}{A fully decentralized peer to peer desktop console messenger with a curses-like interface. Created in a team of three people on first bachelor year}{\textit{\textbf{Kotlin}}}{}{}
+\cventry{2026}{CTO, travel-tech startup}{iOS travel app on an async Rust backend: journey planning (RAPTOR, A*) also running offline on-device, 19 European operators merged into one network, zero-downtime data pipeline}{\textbf{Rust, Tokio, axum, PostgreSQL}}{}{}
+\cventry{2025}{\href{https://github.com/JetBrains-Research/rocqstar-rag}{Rocq RAG}}{Retrieval for Rocq proof generation via contrastive embeddings (CodeBERT, InfoNCE): up to +28\% generation success. Adopted by another research lab}{\textbf{PyTorch}}{}{}
+\cventry{2024}{\href{https://github.com/JetBrains-Research/coqpilot}{CoqPilot}}{VS Code extension for LLM-based Rocq proof generation, with post-training to improve Rocq code completion. Grew from a solo project into a team; 130+ GitHub stars}{\textbf{TypeScript, Rocq}}{}{}
+\cventry{2023}{\href{https://github.com/K-dizzled/relations-via-egg}{Proofs of relational expressions via EGG}}{Equality saturation for solving equalities of relational expressions, bachelor thesis}{\textbf{Rust, OCaml, Coq}}{}{}
+\cventry{2022}{\href{https://github.com/K-dizzled/progressive-gan-pytorch}{Progressive GAN PyTorch}}{Implementation of ``Progressive Growing of GANs for Improved Quality, Stability, and Variation''}{\textbf{Python, PyTorch}}{}{}
 
 \section{Contests}
-\cvlistitem{Place 16 globally in \textbf{Reply Code Challenge} 2021.}
-\cvlistitem{Place 407 globally in \textbf{Google Hash Code} 2021.}
+\cvitem{2021}{\textbf{Reply Code Challenge}: 16th place globally; \textbf{Google Hash Code}: 407th place globally}
 
 \end{document}
 
